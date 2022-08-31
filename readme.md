@@ -7,6 +7,12 @@ Features:
 - Save and load layout
 - Bookmarks
 
+![Inspector obj](https://user-images.githubusercontent.com/45795134/187693402-e1c70b0f-789e-44c0-87fb-b04ad013bb40.jpg)
+![Inspector array](https://user-images.githubusercontent.com/45795134/187693438-20f3b1e0-4897-4a1e-8927-da438220a14e.jpg)
+![Inspector bookmarks](https://user-images.githubusercontent.com/45795134/187693452-08e41f84-d47e-47b6-a8e2-af4f167fccda.jpg)
+![Inspector editing](https://user-images.githubusercontent.com/45795134/187693533-170aca15-197b-4359-80f6-530a5d707ea7.jpg)
+
+
 Place DeepDebug folder in your root project folder (res://)
 To enable the debbuger just place the scene from DeepDebug folder in you game scene.
 
@@ -24,7 +30,8 @@ override void ExitTree()
 {
 	onDebugOpen -= InputFreeze;
 	onDebugClose -= InputUnfreeze;
-}```
+}
+```
 
 Events:
 - onDebugOpen
