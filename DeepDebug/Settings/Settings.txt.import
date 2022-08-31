@@ -1,0 +1,13 @@
+[remap]
+
+importer="text.file.data"
+type="TextFile"
+path="res://.import/Settings.txt-02a35f8c57ef5d3799d9b438e7aef843.tres"
+
+[deps]
+
+source_file="res://DeepDebug/Settings/Settings.txt"
+dest_files=[ "res://.import/Settings.txt-02a35f8c57ef5d3799d9b438e7aef843.tres" ]
+
+[params]
+

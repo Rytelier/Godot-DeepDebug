@@ -1,0 +1,13 @@
+[remap]
+
+importer="text.file.data"
+type="TextFile"
+path="res://.import/Layout.txt-a85d9ddc6d1e0272d7f9a04a67d66a12.tres"
+
+[deps]
+
+source_file="res://DeepDebug/Settings/Layout.txt"
+dest_files=[ "res://.import/Layout.txt-a85d9ddc6d1e0272d7f9a04a67d66a12.tres" ]
+
+[params]
+

@@ -1,0 +1,13 @@
+[remap]
+
+importer="text.file.data"
+type="TextFile"
+path="res://.import/Hotkeys.txt-ad3ede38cd1c46a28b175265ec7d9ba6.tres"
+
+[deps]
+
+source_file="res://DeepDebug/Settings/Hotkeys.txt"
+dest_files=[ "res://.import/Hotkeys.txt-ad3ede38cd1c46a28b175265ec7d9ba6.tres" ]
+
+[params]
+

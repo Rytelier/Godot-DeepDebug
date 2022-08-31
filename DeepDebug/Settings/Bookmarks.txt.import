@@ -1,0 +1,13 @@
+[remap]
+
+importer="text.file.data"
+type="TextFile"
+path="res://.import/Bookmarks.txt-143d022d84a3b030215813735f266571.tres"
+
+[deps]
+
+source_file="res://DeepDebug/Settings/Bookmarks.txt"
+dest_files=[ "res://.import/Bookmarks.txt-143d022d84a3b030215813735f266571.tres" ]
+
+[params]
+

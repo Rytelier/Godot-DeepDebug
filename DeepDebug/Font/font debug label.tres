@@ -1,0 +1,13 @@
+[gd_resource type="DynamicFont" load_steps=3 format=2]
+
+[ext_resource path="res://DeepDebug/Font/CONSOLAB.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/fonts/Oxanium-Bold.ttf" type="DynamicFontData" id=2]
+
+[resource]
+size = 12
+outline_size = 1
+outline_color = Color( 0.482353, 0.482353, 0.482353, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 2 )

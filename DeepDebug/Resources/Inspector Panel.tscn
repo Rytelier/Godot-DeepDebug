@@ -1,0 +1,370 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://DeepDebug/Resources/bookmark.png" type="Texture" id=1]
+[ext_resource path="res://DeepDebug/Resources/X.png" type="Texture" id=2]
+[ext_resource path="res://DeepDebug/Resources/list bookmark.png" type="Texture" id=3]
+[ext_resource path="res://DeepDebug/Resources/expand.png" type="Texture" id=4]
+[ext_resource path="res://DeepDebug/Resources/move.png" type="Texture" id=5]
+[ext_resource path="res://DeepDebug/Resources/minim.png" type="Texture" id=6]
+[ext_resource path="res://DeepDebug/Resources/scale.png" type="Texture" id=7]
+[ext_resource path="res://DeepDebug/Resources/refresh.png" type="Texture" id=8]
+[ext_resource path="res://DeepDebug/Scripts/UI_DebugInspector.cs" type="Script" id=9]
+[ext_resource path="res://DeepDebug/Font/font debug.tres" type="DynamicFont" id=10]
+[ext_resource path="res://DeepDebug/Resources/back.png" type="Texture" id=11]
+[ext_resource path="res://DeepDebug/Resources/list refresh.png" type="Texture" id=12]
+[ext_resource path="res://DeepDebug/Font/font debug label.tres" type="DynamicFont" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=278]
+
+[sub_resource type="StyleBoxEmpty" id=279]
+
+[node name="Inspector Panel" type="Panel"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 170.0
+margin_top = 74.0
+margin_right = -751.0
+margin_bottom = -5.0
+script = ExtResource( 9 )
+
+[node name="Container" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Variable list" type="ScrollContainer" parent="Container"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 33.0
+margin_top = 62.0
+margin_bottom = 2.0
+
+[node name="List" type="VBoxContainer" parent="Container/Variable list"]
+
+[node name="Path" type="Button" parent="Container"]
+anchor_right = 1.0
+margin_left = 33.0
+margin_top = 27.0
+margin_right = 56.0
+margin_bottom = 40.0
+size_flags_horizontal = 13
+size_flags_vertical = 12
+custom_fonts/font = ExtResource( 10 )
+custom_styles/normal = SubResource( 278 )
+text = "Node path"
+align = 0
+
+[node name="Type" type="Label" parent="Container"]
+anchor_right = 1.0
+margin_left = 45.0
+margin_top = 44.0
+margin_right = 56.0
+margin_bottom = 57.0
+size_flags_horizontal = 13
+size_flags_vertical = 12
+custom_fonts/font = ExtResource( 10 )
+custom_styles/normal = SubResource( 278 )
+text = "Type"
+
+[node name="Refresh" type="Button" parent="Container"]
+margin_top = 49.0
+margin_right = 25.0
+margin_bottom = 72.0
+icon = ExtResource( 8 )
+expand_icon = true
+
+[node name="Back" type="Button" parent="Container"]
+margin_top = 23.0
+margin_right = 25.0
+margin_bottom = 46.0
+icon = ExtResource( 11 )
+expand_icon = true
+
+[node name="Bookmark" type="Button" parent="Container"]
+margin_top = 75.0
+margin_right = 25.0
+margin_bottom = 98.0
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="Bookmark list" type="Button" parent="Container"]
+margin_top = 101.0
+margin_right = 25.0
+margin_bottom = 124.0
+icon = ExtResource( 3 )
+expand_icon = true
+
+[node name="Paths refresh" type="Button" parent="Container"]
+margin_top = 155.0
+margin_right = 25.0
+margin_bottom = 178.0
+icon = ExtResource( 12 )
+expand_icon = true
+
+[node name="Scale" type="Button" parent="Container"]
+margin_left = 24.0
+margin_right = 48.0
+margin_bottom = 20.0
+icon = ExtResource( 7 )
+expand_icon = true
+
+[node name="Resize" type="Button" parent="Container"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -19.0
+margin_top = -17.0
+margin_right = 2.0
+margin_bottom = 3.0
+
+[node name="Array entry" type="Button" parent="Container"]
+visible = false
+margin_top = 39.0
+margin_right = 332.0
+margin_bottom = 52.0
+custom_fonts/font = ExtResource( 10 )
+custom_styles/normal = SubResource( 279 )
+text = "Variable"
+align = 0
+
+[node name="Value group" type="HBoxContainer" parent="Container"]
+visible = false
+margin_top = 39.0
+margin_right = 94.0
+margin_bottom = 52.0
+custom_constants/separation = 15
+
+[node name="Extend" type="Control" parent="Container/Value group"]
+margin_bottom = 13.0
+
+[node name="TextureRect" type="TextureRect" parent="Container/Value group/Extend"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_scale = Vector2( 0.188282, 0.188282 )
+texture = ExtResource( 4 )
+
+[node name="Variable" type="Button" parent="Container/Value group"]
+margin_left = 15.0
+margin_right = 71.0
+margin_bottom = 13.0
+custom_fonts/font = ExtResource( 10 )
+custom_styles/normal = SubResource( 279 )
+text = "Variable"
+align = 0
+
+[node name="Value" type="Button" parent="Container/Value group"]
+margin_left = 86.0
+margin_right = 114.0
+margin_bottom = 13.0
+custom_fonts/font = ExtResource( 10 )
+custom_styles/normal = SubResource( 279 )
+text = "NULL"
+align = 0
+
+[node name="FoundPath" type="Button" parent="Container"]
+visible = false
+anchor_right = 1.0
+margin_top = 55.0
+margin_right = 30.0
+margin_bottom = 68.0
+size_flags_horizontal = 13
+size_flags_vertical = 12
+custom_fonts/font = ExtResource( 10 )
+custom_styles/normal = SubResource( 278 )
+text = "Found path"
+align = 0
+expand_icon = true
+
+[node name="Label" type="Label" parent="Container/FoundPath"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "S"
+
+[node name="Value input" type="PopupPanel" parent="Container"]
+margin_right = 8.0
+margin_bottom = 8.0
+
+[node name="Input" type="LineEdit" parent="Container/Value input"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 98.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 10 )
+text = "Input value"
+
+[node name="Value bool" type="PopupPanel" parent="Container"]
+margin_right = 8.0
+margin_bottom = 8.0
+
+[node name="Switch" type="CheckBox" parent="Container/Value bool"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 60.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 10 )
+text = "Bool"
+
+[node name="Value number" type="PopupPanel" parent="Container"]
+margin_right = 8.0
+margin_bottom = 8.0
+
+[node name="Value" type="SpinBox" parent="Container/Value number"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 78.0
+margin_bottom = 28.0
+min_value = -9.22337e+18
+max_value = 9.22337e+18
+step = 0.001
+allow_greater = true
+allow_lesser = true
+
+[node name="Value vector" type="PopupPanel" parent="Container"]
+margin_right = 231.0
+margin_bottom = 39.0
+
+[node name="Panel" type="Panel" parent="Container/Value vector"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 227.0
+margin_bottom = 35.0
+mouse_filter = 2
+
+[node name="x" type="SpinBox" parent="Container/Value vector/Panel"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 78.0
+margin_bottom = 28.0
+mouse_filter = 1
+min_value = -9.22337e+18
+max_value = 9.22337e+18
+step = 0.001
+allow_greater = true
+allow_lesser = true
+
+[node name="y" type="SpinBox" parent="Container/Value vector/Panel"]
+margin_left = 75.0
+margin_top = 4.0
+margin_right = 149.0
+margin_bottom = 28.0
+mouse_filter = 1
+min_value = -9.22337e+18
+max_value = 9.22337e+18
+step = 0.001
+allow_greater = true
+allow_lesser = true
+
+[node name="z" type="SpinBox" parent="Container/Value vector/Panel"]
+margin_left = 148.0
+margin_top = 4.0
+margin_right = 222.0
+margin_bottom = 28.0
+mouse_filter = 1
+min_value = -9.22337e+18
+max_value = 9.22337e+18
+step = 0.001
+allow_greater = true
+allow_lesser = true
+
+[node name="Value color" type="PopupPanel" parent="Container"]
+margin_left = 28.0
+margin_top = 42.0
+margin_right = 338.0
+margin_bottom = 486.0
+mouse_filter = 1
+mouse_default_cursor_shape = 3
+
+[node name="Picker" type="ColorPicker" parent="Container/Value color"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -151.0
+margin_top = -218.0
+margin_right = 151.0
+margin_bottom = 218.0
+mouse_filter = 0
+mouse_default_cursor_shape = 3
+presets_enabled = false
+presets_visible = false
+
+[node name="Delete" type="PopupPanel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -103.0
+margin_top = -39.0
+margin_right = 103.0
+margin_bottom = 39.0
+
+[node name="Panel" type="Panel" parent="Delete"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -99.0
+margin_top = -35.0
+margin_right = 99.0
+margin_bottom = 35.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Delete/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -77.0
+margin_top = 8.0
+margin_right = 77.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 10 )
+text = "Delete this inspector?"
+
+[node name="Confirm" type="Button" parent="Delete/Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -40.5
+margin_top = -33.0
+margin_right = 40.5
+margin_bottom = -13.0
+mouse_filter = 1
+custom_fonts/font = ExtResource( 10 )
+text = "Delete"
+
+[node name="Name" type="LineEdit" parent="."]
+margin_left = 52.0
+margin_right = 301.0
+margin_bottom = 13.0
+size_flags_horizontal = 13
+size_flags_vertical = 12
+custom_fonts/font = ExtResource( 10 )
+custom_styles/normal = SubResource( 278 )
+text = "Inspector"
+
+[node name="Move" type="Button" parent="."]
+margin_right = 22.0
+margin_bottom = 20.0
+icon = ExtResource( 5 )
+expand_icon = true
+
+[node name="Close" type="Button" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -22.0
+margin_bottom = 20.0
+icon = ExtResource( 2 )
+expand_icon = true
+
+[node name="Minimize" type="Button" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -46.0
+margin_right = -24.0
+margin_bottom = 20.0
+icon = ExtResource( 6 )
+expand_icon = true

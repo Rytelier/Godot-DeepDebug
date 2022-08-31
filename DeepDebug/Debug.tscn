@@ -1,0 +1,205 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://DeepDebug/Scripts/UI_Debug.cs" type="Script" id=1]
+[ext_resource path="res://Scripts/Debug/Testing.cs" type="Script" id=2]
+[ext_resource path="res://DeepDebug/Font/font debug.tres" type="DynamicFont" id=3]
+[ext_resource path="res://DeepDebug/Resources/freeze.png" type="Texture" id=4]
+[ext_resource path="res://DeepDebug/Resources/X.png" type="Texture" id=5]
+[ext_resource path="res://DeepDebug/Resources/settings.png" type="Texture" id=6]
+[ext_resource path="res://DeepDebug/Font/font debug label.tres" type="DynamicFont" id=7]
+
+[node name="Debug" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+fpsEnabled = true
+
+[node name="Testing" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="fps" type="Label" parent="CanvasLayer"]
+margin_left = 241.0
+margin_top = 9.0
+margin_right = 507.0
+margin_bottom = 102.0
+custom_fonts/font = ExtResource( 3 )
+text = "25"
+
+[node name="Inspector create" type="Button" parent="CanvasLayer"]
+margin_top = 102.0
+margin_right = 124.0
+margin_bottom = 122.0
+custom_fonts/font = ExtResource( 3 )
+text = "Create inspector"
+
+[node name="Save" type="Button" parent="CanvasLayer"]
+margin_top = 170.0
+margin_right = 124.0
+margin_bottom = 190.0
+custom_fonts/font = ExtResource( 3 )
+text = "Save layout"
+
+[node name="Close" type="Button" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -67.0
+margin_top = 105.0
+margin_bottom = 124.0
+custom_fonts/font = ExtResource( 3 )
+icon = ExtResource( 5 )
+align = 0
+expand_icon = true
+
+[node name="Freeze" type="Button" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -67.0
+margin_top = 143.0
+margin_bottom = 162.0
+custom_fonts/font = ExtResource( 3 )
+icon = ExtResource( 4 )
+align = 0
+expand_icon = true
+
+[node name="Settings" type="Button" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -146.0
+margin_bottom = -116.0
+custom_fonts/font = ExtResource( 3 )
+icon = ExtResource( 6 )
+align = 0
+expand_icon = true
+
+[node name="Settings menu" type="PopupPanel" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -151.0
+margin_top = -89.0
+margin_right = 151.0
+margin_bottom = 90.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Settings menu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -147.0
+margin_top = -85.5
+margin_right = 147.0
+margin_bottom = 85.5
+
+[node name="Hotkeys" type="Label" parent="CanvasLayer/Settings menu/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -52.5
+margin_top = -84.5
+margin_right = 52.5
+margin_bottom = -70.5
+custom_fonts/font = ExtResource( 3 )
+text = "Hotkeys"
+align = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Settings menu/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -52.5
+margin_top = -48.5
+margin_right = 52.5
+margin_bottom = -34.5
+custom_fonts/font = ExtResource( 3 )
+text = "Open/close menu"
+align = 1
+
+[node name="Open key" type="Button" parent="CanvasLayer/Settings menu/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -31.5
+margin_right = 22.0
+margin_bottom = -11.5
+custom_fonts/font = ExtResource( 3 )
+text = "Tab"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Settings menu/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -70.0
+margin_top = -5.5
+margin_right = 70.0
+margin_bottom = 8.5
+custom_fonts/font = ExtResource( 3 )
+text = "Freeze/unfreeze menu"
+align = 1
+
+[node name="Freeze key" type="Button" parent="CanvasLayer/Settings menu/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -26.0
+margin_top = 11.5
+margin_right = 26.0
+margin_bottom = 31.5
+custom_fonts/font = ExtResource( 3 )
+text = "PgUp"
+
+[node name="Save" type="Button" parent="CanvasLayer/Settings menu/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -54.0
+margin_top = 63.5
+margin_right = 61.0
+margin_bottom = 82.5
+custom_fonts/font = ExtResource( 3 )
+text = "Save"
+
+[node name="Freeze" type="Panel" parent="CanvasLayer/Settings menu/Panel"]
+visible = false
+self_modulate = Color( 0, 0, 0, 0.619608 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -498.0
+margin_top = -280.0
+margin_right = 498.0
+margin_bottom = 278.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Settings menu/Panel/Freeze"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -49.0
+margin_top = -17.5
+margin_right = 49.0
+margin_bottom = -3.5
+custom_fonts/font = ExtResource( 7 )
+text = "Assign new key"
+
+[node name="Freezer" type="CanvasLayer" parent="."]
+layer = 6
+visible = false
+
+[node name="Freezer" type="Panel" parent="Freezer"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
