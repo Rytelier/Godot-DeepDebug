@@ -13,6 +13,7 @@ public class UI_Debug : Control
     public event EventDebug onDebugFreeze;
     public event EventDebug onDebugUnfreeze;
 
+    [Export] bool startEnabled;
     [Export] bool fpsEnabled;
 
     public string folder = "DeepDebug";
@@ -101,6 +102,7 @@ public class UI_Debug : Control
         init = true;
 
         onDebugClose += CloseSettings;
+        if (!startEnabled) OpenClose();
     }
 
     public override void _ExitTree()
